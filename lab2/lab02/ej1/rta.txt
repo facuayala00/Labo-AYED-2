@@ -1,0 +1,2 @@
+¿Qué relación implementa la función goes_before()?
+La relación que implementa es que x < y (x es menor que y) cuando |x| < |y| (el valor absoluto de x es menor que el valor absoluto de y)
