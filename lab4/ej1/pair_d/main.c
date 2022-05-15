@@ -25,3 +25,7 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
+/*¿Qué diferencia hay entre la especificación anterior y la que se encuentra en el pair.h de la carpeta pair_d?
+ * La diferencia esta en que en esta implementacion se usan elementos del tipo elem
+ *
+ */
