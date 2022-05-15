@@ -28,6 +28,6 @@ int main(void) {
 
 /*
  *¿La implementación logra encapsulamiento? ¿Por qué sí? ¿Por qué no?
- * No se logra encapsulamiento en la implementacion ya que se puede hacer uso de los comandos p->fst y p->snd 
- * rompiendo asi la abstraccion
+ * Si se logra encapsulamiento ya que no se puede llamar directamente a p->fst y p->snd
+ * por lo que hay que hacer uso de las implementaciones de las operaciones definidas
  */
