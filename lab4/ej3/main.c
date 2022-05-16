@@ -55,7 +55,7 @@ list array_to_list(int array[], unsigned int length) {
 
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
-    FILE *file = NULL;
+    //FILE *file = NULL;
 
     /* parse the filepath given in command line arguments */
     filepath = parse_filepath(argc, argv);
@@ -74,6 +74,8 @@ int main(int argc, char *argv[]) {
 
     /* call the average function */
     printf("The average is: %.2f \n", average(l));
+
+    destroy(l);
 
     return (EXIT_SUCCESS);
 }

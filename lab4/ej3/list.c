@@ -87,7 +87,7 @@ list_elem index(list l, unsigned int n){
     while (i < n && !(is_empty(l))){
         p = l;
         l = p -> next;
-        e = p -> next;
+        e = p -> elem;
         i++;
     }
     return e;
