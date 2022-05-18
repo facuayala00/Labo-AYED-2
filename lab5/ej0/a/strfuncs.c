@@ -24,7 +24,7 @@ char* string_filter(const char * str, char c)
     char* res = NULL;
     const size_t str_length = string_length(str); //no se va a modificar nunca por lo q agrego const
     const size_t c_count = string_ocurrence_count(str, c); //Modularizamos
-    //res = (char*)malloc(sizeof(char) * (str_length +1u));
+    //res = (char*)malloc(sizeof(char) * (str_length - c_count + 1u));
     res = malloc(sizeof(*res) * (str_length +1u)); //Segun google es mala practica hacer el cast
     return res;
 }
