@@ -48,6 +48,25 @@ list tail(list l){
 }
 
 
+//Funcion alternatica de addr
+/*
+list addr(list l, list_elem e){
+    list p = malloc(sizeof(struct Node)), q = l;
+    p -> elem = e;
+    p -> next = NULL;
+    if (l == NULL){
+        l = p;
+    }
+    else{
+        while(q->next != NULL){
+            q = q->next;
+        }
+        q -> next = p;
+    }
+    return l;
+}
+*/
+
 list addr(list l, list_elem e){
     list p, q;
     p = NULL;

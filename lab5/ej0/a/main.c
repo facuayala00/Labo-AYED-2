@@ -18,7 +18,6 @@ int main(void) {
 
     free(filtered);
     filtered = NULL;
-
     return EXIT_SUCCESS;
 }
 
