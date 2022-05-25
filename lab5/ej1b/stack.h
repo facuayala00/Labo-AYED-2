@@ -12,7 +12,7 @@
 */
 typedef struct _s_stack *stack;
 
-/**
+/*
 * @brief Stack elements type definition
 */
 typedef int stack_elem;

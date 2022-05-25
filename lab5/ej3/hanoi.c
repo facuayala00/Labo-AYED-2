@@ -26,8 +26,9 @@ struct _hanoi {
 hanoi_t hanoi_init(unsigned int disk_count) {
     hanoi_t hanoi = malloc(sizeof(struct _hanoi));
     assert(hanoi != NULL);
+    hanoi->source = stack_empty();
     hanoi->aux = stack_empty();
-    hanoi->target = NULL;
+    hanoi->target = stack_empty();
     hanoi->disk_count = disk_count;
     for (unsigned int i = disk_count; i > 0; --i) {
         hanoi->source = stack_push(hanoi->source, i);
@@ -46,6 +47,9 @@ void hanoi_print(hanoi_t hanoi) {
 
 hanoi_t hanoi_destroy(hanoi_t hanoi) {
     assert(hanoi != NULL);
+    hanoi->aux = stack_destroy(hanoi->aux);
+    hanoi->source = stack_destroy(hanoi->source);
+    hanoi->target = stack_destroy(hanoi->target);
     free(hanoi);
     return NULL;
 }
@@ -64,6 +68,7 @@ static void move(unsigned int current,
         hanoi_print(hanoi);
         move(current - 1, hanoi, aux_ptr, target_ptr, source_ptr);
     }
+
 }
 
 
