@@ -40,7 +40,6 @@ list_elem head(list l){
 list tail(list l){
     assert(!is_empty(l));
     list p = NULL;
-    p = malloc(sizeof(list));
     p = l;
     l = l -> next;
     free(p);
@@ -65,7 +64,7 @@ list addr(list l, list_elem e){
     }
     return l;
 }
-*/
+*/ 
 
 list addr(list l, list_elem e){
     list p, q;
