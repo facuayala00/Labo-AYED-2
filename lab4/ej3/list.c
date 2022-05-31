@@ -17,7 +17,7 @@ list empty_list(void){
 
 list addl(list l, list_elem e){
     list p = NULL;
-    p = malloc(sizeof(list));
+    p = malloc(sizeof(list)); //modificar uwu, bacer malloc de struct no de list
     p->elem = e;
     p->next = l;
     l = p;
